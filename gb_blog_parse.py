@@ -100,3 +100,7 @@ if __name__ == "__main__":
     db_client = pymongo.MongoClient("mongodb://localhost:27017")
     parser = GbBlogParse("https://gb.ru/posts", db_client, 0.5)
     parser.run()
+
+
+
+# test 2
