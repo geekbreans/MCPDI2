@@ -85,6 +85,9 @@ class GbBlogParse:
                 "url": urljoin(response.url, author_name_tag.parent.attrs.get("href")),
                 "name": author_name_tag.text,
             },
+            "author_path":urljoin(response.url, soup.find('a', attrs={"style": "text-decoration:none;"}).get("href")),
+            "datetime":soup.find('time').get("datetime"),
+            "img_path": soup.find('img').get("src")
         }
         self._save(data)
 
